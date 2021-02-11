@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>HIERARCHICAL STYLES</title>
+      <meta charset="utf-8" />
+      <meta name="description" content="Learn how to create a website">
+      <meta name="keywords" content="HTML,CSS,Notepad">
+      <meta name="author" content="Parth Patel">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="style.css" />
+	  <style>
+	    body {background-color: #FFFFD5; margin: 0px;}  
+	  </style>   
+   </head>
+   <body >
+      <div class="wrapper">
+         <div class="banner">
+            <h1>WEB DEVELPOMENT:<br>HTML & CSS</h1>
+         </div>
+         <nav>
+			 <div class="navbar" id="navbar_sticky">
+				<div class="dropdown">
+				   <button class="drop_button active" onclick="window.location.href='index.html';">HOME</button>
+				   <div class="drp_content">
+					  <a href="index.html#Introduction">Introduction</a>
+					  <a href="index.html#Introduction_HTML">HTML</a>
+					  <a href="index.html#Introduction_CSS">CSS</a>
+					  <a href="index.html#Introduction_JS">JS</a>
+				   </div>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='content_seperation.html';">CONTENT SEPERATION</button>	
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='css_selectors.html';" >CSS SELECTORS</button>
+				   <div class="drp_content">
+					  <a href="css_selectors.html#selector1">ELEMENT SELECTOR</a>
+					  <a href="css_selectors.html#selector2">ID SELECTO</a>
+					  <a href="css_selectors.html#selector3">CLASS SELECTOR</a>
+					  <a href="css_selectors.html#selector4">GROUPING SELECTOR</a>
+					  <a href="css_selectors.html#selector5">UNIVERSAL SELECTOR</a>
+					  <a href="css_selectors.html#all_selector">ALL SELECTORS</a>
+				   </div>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='hierarchical_styles.html';" >HIERARCHICAL STYLES</button>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='about_us.html';" >ABOUT US</button>
+				</div>
+			 </div>
+		 </nav>
+         <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("navbar_sticky");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+            	navbar.classList.add("sticky")
+              } else {
+            	navbar.classList.remove("sticky");
+              }
+            }
+            
+            window.addEventListener('scroll', stickyNavigation);
+            
+         </script>				
+         <div >
+            <img class="page_image"  src="images/hierarchical_styles.jpg" alt="Learn web development">
+         </div>
+         <div class="content">
+            <h1><strong>HIERARCHICAL STYLES</strong></h1>
+			<p>There are various ways to apply styling to HTML tags, such as id, class, internal css or inline css and many more, you can even use different types of css selectors that have conflicting styling on the same HTML code. However, the type of css selector that you use has a huge impact on the what styling is applied to the HTML code. This is because different CSS selectors have different hierarchies / specificity, and so the CSS with the higher specificity will be applied to the HTML code. If two selectors have the same specificty value then the selector that was applied last will take effect. </p>
+			<p>The specificity level of a CSS selector can be defined by four distinct categories :</p>
+			<p><b>Inline styles:</b><br>- An inline style is attached directly to the element to be styled. Example: &lt;h1 style="color: #ffffff;" &gt;.<b><br><br>IDs: </b> <br>- An ID is a unique identifier for the page elements, such as #navbar.<b><br><br>Classes, attributes and pseudo-classes: </b> <br>- This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.<br><br><b>Elements and pseudo-elements: </b> <br>- This category includes element names and pseudo-elements, such as h1, div, :before and :after.</p>
+			<p>You can find more information on how to the specificity rules and how to calculate specificty at: <a href="https://www.w3schools.com/css/css_specificity.asp">https://www.w3schools.com/css/css_specificity.asp</a> </p>
+		 </div>
+         <div class="content">
+            <img class="example_image"  src="images/spec1.png" alt="Learn web development">
+         </div>
+         <hr>
+         <div class="content">
+            <img class="example_image"  src="images/spec2.png" alt="Learn web development">
+         </div>
+         <hr>
+         <div class="content">
+            <img class="example_image"  src="images/spec3.png" alt="Learn web development">
+         </div>
+         <hr>
+         <div class="content">
+            <img class="example_image"  src="images/spec4.png" alt="Learn web development">
+         </div>
+         <hr>
+         <footer class="footer">
+            <h5><strong>Copyright &copy;</strong>2020, Parth Patel</h5>
+         </footer>
+      </div>
+   </body>
+</html>

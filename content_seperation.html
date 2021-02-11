@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>CONTENT SEPERATION</title>
+      <meta charset="utf-8" />
+      <meta name="description" content="Learn how to create a website">
+      <meta name="keywords" content="HTML,CSS,Notepad">
+      <meta name="author" content="Parth Patel">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="style.css" />
+	  <style>
+	    body {background-color: #FFFFD5; margin: 0px;}  
+	  </style>   
+   </head>
+   <body >
+      <div class="wrapper">
+         <div class="banner">
+            <h1>WEB DEVELPOMENT:<br>HTML & CSS</h1>
+         </div>
+		 <nav>
+			 <div class="navbar" id="navbar_sticky">
+				<div class="dropdown">
+				   <button class="drop_button active" onclick="window.location.href='index.html';">HOME</button>
+				   <div class="drp_content">
+					  <a href="index.html#Introduction">Introduction</a>
+					  <a href="index.html#Introduction_HTML">HTML</a>
+					  <a href="index.html#Introduction_CSS">CSS</a>
+					  <a href="index.html#Introduction_JS">JS</a>
+				   </div>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='content_seperation.html';">CONTENT SEPERATION</button>	
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='css_selectors.html';" >CSS SELECTORS</button>
+				   <div class="drp_content">
+					  <a href="css_selectors.html#selector1">ELEMENT SELECTOR</a>
+					  <a href="css_selectors.html#selector2">ID SELECTO</a>
+					  <a href="css_selectors.html#selector3">CLASS SELECTOR</a>
+					  <a href="css_selectors.html#selector4">GROUPING SELECTOR</a>
+					  <a href="css_selectors.html#selector5">UNIVERSAL SELECTOR</a>
+					  <a href="css_selectors.html#all_selector">ALL SELECTORS</a>
+				   </div>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='hierarchical_styles.html';" >HIERARCHICAL STYLES</button>
+				</div>
+				<div class="dropdown">
+				   <button class="drop_button" onclick="window.location.href='about_us.html';" >ABOUT US</button>
+				</div>
+			 </div>
+		 </nav>
+         <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("navbar_sticky");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+            	navbar.classList.add("sticky")
+              } else {
+            	navbar.classList.remove("sticky");
+              }
+            }
+            
+            window.addEventListener('scroll', stickyNavigation);
+            
+         </script>				
+         <div >
+            <img class="page_image" src="images/content_seperation.jpg" alt="Learn web development">
+         </div>
+         <div class="content">
+            <h1><strong>CONTENT SEPERATION</strong></h1>
+            <p>As mentioned before HTML is used to structure a webpage and its contents, whereas CSS is used to present the way the contents of the webpage are displayed to the user. There are many reasons for why separating content from formatting is considered good practice and why it is important to separate the structure and the styling of a website. In the following points below, I will provide reason for why this is:</p>
+         </div>
+         <hr>
+         <div class="content">
+            <ul id="column_layout">
+               <li><b>Manageability:</b><br> Firstly, having a separate CSS file that controls the styling for how the contents of a webpage are displayed, helps organizations with multiple webpages manage the presentation of their website, as this affects their branding. Organizations such as Argos have multiple webpages for their various products and so they would use a common style sheet to present their webpages as it would take a lot of man hours to individually add styling to every webpage. Moreover, if the organization was undergoing rebranding or was running themes such as Christmas or Halloween then organization can easily change the styling for all their webpages by updating the single CSS file.</li>    
+               <li><br><b>Faster:</b><br> Secondly, having a septate stylesheet help webpages load significantly faster, this is because when as user open a website the stylesheet will automatically be saved to the browsers cache, this means that when the user loads another page from the website the Brower will use the already downloaded stylesheet to present the contents. If the styles had been integrated into the structure of the webpages, then the webpage would have to download the code to style the page every time the user goes on another page. This is especially important to users form third world countries as they might not have the most stable and fast connection to the internet as first world countries.</li>
+               <li><br><b>Multi-person team:</b><br> If there are more than one person that inputs data for the content of the website then they do not need to worry about how the content they inputted is going to be presented. An example of the is a website that displays news articles, if the styling is separated and only managed by  the developers  the journalists do not need worry about styling the content, this would be done automatically using the stylesheet, they only need to enter the contents of their article. A separate stylesheet would ensure that the different articles produced by different journalists is presented and formatted using a unified style e.g. same font, font size and heading size.</li>
+               <li><br><b>Accessibility:</b><br> Having a separated stylesheet for formatting make the website more accessible to a range of different people with different needs. This is because screen readers and braille devices would not have to deal with the formatting of the webpage and would only give the user the necessary contents of the webpage.</li>
+               <li><br><b>Search engine optimization (SEO):</b><br> Websites that utilize the principle of content and style separation are more likely to perform better in search engines rankings as the search engine does not have to go through irrelevant styling code and can get a strong representation of the website based on its contents.</li>
+               <li><br><b>Compatibility:</b><br> Finally, content and formatting separation helps the website be more compatible with older browsers that might not support or have disabled certain CSS styles as the user will still be able to view the HTML contents.</li>
+            </ul>
+         </div>
+         <hr>
+         <footer class="footer">
+            <h5><strong>Copyright &copy;</strong>2020, Parth Patel</h5>
+         </footer>
+      </div>
+   </body>
+</html>
